@@ -34,5 +34,8 @@ def lambda_handler(event, context):
             },
         ReturnValues="UPDATED_NEW"
         )
-    return(event)
+    return {
+        "statusCode": 200,
+        "body": json.dumps(event)
+        }
    
