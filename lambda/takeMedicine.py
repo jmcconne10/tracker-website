@@ -4,7 +4,6 @@ from decimal import Decimal
 import datetime
 import dateutil
 
-#test
 
 def lambda_handler(event, context):
     
@@ -35,5 +34,5 @@ def lambda_handler(event, context):
             },
         ReturnValues="UPDATED_NEW"
         )
-    return(item)
+    return(event)
    
