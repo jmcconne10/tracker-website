@@ -22,6 +22,7 @@ def lambda_handler(event, context):
     central = dateutil.tz.gettz('US/Central')
     now = datetime.datetime.now(tz=central).strftime(date_format)
 
+    body = name
 
     try:
         table.update_item(
@@ -35,11 +36,12 @@ def lambda_handler(event, context):
             ConditionExpression='attribute_exists(taken)',
             ReturnValues="UPDATED_NEW"
             )
+        body = body + " successfully updated"
     except:
         print("User doesn't exist")
-        
+        body = body + " did not exist"
     return {
         "statusCode": 200,
-        "body": json.dumps(name)
+        "body": json.dumps(body)
         }
    
