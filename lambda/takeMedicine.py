@@ -17,7 +17,7 @@ def lambda_handler(event, context):
     
     item = response['Items']
     
-    name = event['name']
+    name=event['queryStringParameters']['name']
     
     central = dateutil.tz.gettz('US/Central')
     now = datetime.datetime.now(tz=central).strftime(date_format)
