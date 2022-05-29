@@ -22,20 +22,26 @@ def lambda_handler(event, context):
     central = dateutil.tz.gettz('US/Central')
     now = datetime.datetime.now(tz=central).strftime(date_format)
 
+    body = name
 
-    
-    table.update_item(
-        Key={
-                'patient':name
-            },
-        UpdateExpression="set taken = :g",  #This is what does the update, 
-        ExpressionAttributeValues={         #This is just used to define the variables, which are used above
-                ':g': now
-            },
-        ReturnValues="UPDATED_NEW"
-        )
+    try:
+        table.update_item(
+            Key={
+                    'patient':name
+                },
+            UpdateExpression="set taken = :g",  #This is what does the update, 
+            ExpressionAttributeValues={         #This is just used to define the variables, which are used above
+                    ':g': now
+                },
+            ConditionExpression='attribute_exists(taken)',
+            ReturnValues="UPDATED_NEW"
+            )
+        body = body + " successfully updated"
+    except:
+        print("User doesn't exist")
+        body = body + " did not exist"
     return {
         "statusCode": 200,
-        "body": json.dumps(name)
+        "body": json.dumps(body)
         }
    
