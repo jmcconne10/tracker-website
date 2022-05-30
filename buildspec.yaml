@@ -7,7 +7,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo now using buildspec from repo
+      - echo running ls command
+      - ls
       - npm run build
   post_build:
     on-failure: CONTINUE
