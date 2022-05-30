@@ -7,6 +7,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - echo now using buildspec from repo
       - npm run build
   post_build:
     on-failure: CONTINUE
@@ -20,3 +21,5 @@ artifacts:
   files:
     - '**/*'
   base-directory: build
+
+aws/codebuild/amazonlinux2-x86_64-standard:3.0
