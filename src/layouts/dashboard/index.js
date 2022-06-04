@@ -43,78 +43,16 @@ function Dashboard() {
       <DashboardNavbar />
       <MDBox py={3}>
         <Grid container spacing={1}>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox p={2} mt="auto">
-              <MDButton
-                component="a"
-                href="https://www.creative-tim.com/product/material-dashboard-pro-react"
-                target="_blank"
-                rel="noreferrer"
-                variant="gradient"
-                color="info"
-                fullWidth
-              >
-                Button1
-              </MDButton>
-            </MDBox>
-          </Grid>
 
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox p={2} mt="auto">
-              <MDButton
-                component="a"
-                href="https://www.creative-tim.com/product/material-dashboard-pro-react"
-                target="_blank"
-                rel="noreferrer"
-                variant="gradient"
-                color="info"
-                fullWidth
-              >
-                  <ul class="w3-ul">
-                      <ol> Brendan</ol>
-                      <ol> Medicine</ol>
-                  </ul>
-              </MDButton>
-            </MDBox>
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox p={2} mt="auto">
-              <MDButton
-                component="a"
-                href="https://www.creative-tim.com/product/material-dashboard-pro-react"
-                target="_blank"
-                rel="noreferrer"
-                variant="gradient"
-                color="info"
-                fullWidth
-              >
-                Button3
-              </MDButton>
-            </MDBox>
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox p={2} mt="auto">
-              <MDButton
-                component="a"
-                href="https://www.creative-tim.com/product/material-dashboard-pro-react"
-                target="_blank"
-                rel="noreferrer"
-                variant="gradient"
-                color="info"
-                fullWidth
-              >
-                Button4
-              </MDButton>
-            </MDBox>
+          <Grid item xs={12} md={1} lg={12}>
+            <QueryTracks />
           </Grid>
 
         </Grid>
 
         <MDBox>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={12}>
+            <Grid item xs={1} md={1} lg={12}>
               <Projects />
             </Grid>
 

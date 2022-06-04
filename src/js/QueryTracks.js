@@ -21,24 +21,24 @@ function QueryTracks() {
       {users.map(item=>(
 
 
-        <Grid item xs={12} md={6} lg={3}>
-        <MDBox p={2} mt="auto">
-        <MDButton
-            component="a"
-            href="https://www.creative-tim.com/product/material-dashboard-pro-react"
-            target="_blank"
-            rel="noreferrer"
-            variant="gradient"
-            color="info"
-            fullWidth
-        >
-            <ul>
-            <li>{item.name}</li>
-            <li>{item.activity}</li>
-            </ul>
-        </MDButton>
-        </MDBox>
-        </Grid>
+            <MDBox p={2} mt="auto" borderRadius="lg">
+                <MDButton
+                    component="a"
+                    href="https://www.creative-tim.com/product/material-dashboard-pro-react"
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="gradient"
+                    color="info"
+                    size="large"
+                    fullWidth
+                >
+                    <div>
+                        {item.name} <p></p>
+                        {item.activity}
+                        
+                    </div>
+                </MDButton>
+            </MDBox>
       ))}
     </div>
   );
