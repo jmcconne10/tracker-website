@@ -34,6 +34,7 @@ import Projects from "layouts/dashboard/components/Projects";
 
 //
 import QueryTracks from "js/QueryTracks";
+//import CompleteTrack from "js/CompleteTrack;"
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
@@ -60,6 +61,7 @@ function Dashboard() {
         </MDBox>
       </MDBox>
       <Footer />
+
     </DashboardLayout>
   );
 }

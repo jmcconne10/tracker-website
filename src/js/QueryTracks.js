@@ -6,6 +6,8 @@ import Grid from "@mui/material/Grid";
 import MDButton from "components/MDButton";
 import MDBox from "components/MDBox";
 
+
+
 function QueryTracks() {
   const [users , setUsers] = useState([]);
   useEffect(()=>{
@@ -16,21 +18,28 @@ function QueryTracks() {
     fetchData();
   },[])
 
+  function sayHello() {
+    alert('Hello!');
+  }
+
+
   return (
     <div>
       {users.map(item=>(
 
 
             <MDBox p={2} mt="auto" borderRadius="lg">
+                
                 <MDButton
-                    component="a"
-                    href="https://www.creative-tim.com/product/material-dashboard-pro-react"
-                    target="_blank"
+                   /* component="a"
+                    href={"http://" & item.name}
+                    target="_blank"*/
                     rel="noreferrer"
                     variant="gradient"
                     color="info"
                     size="large"
-                    fullWidth
+                    fullWidth 
+                    onClick={sayHello}
                 >
                     <div>
                         {item.name} <p></p>
@@ -40,6 +49,8 @@ function QueryTracks() {
                 </MDButton>
             </MDBox>
       ))}
+
+      <script></script>
     </div>
   );
 }
