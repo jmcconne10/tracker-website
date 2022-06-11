@@ -18,8 +18,8 @@ export default function QueryTracks() {
     fetchData();
   },[])
 
-  const apiCall = (incomingVar) => {
-    alert(incomingVar);
+  const apiCall = (activity,name) => {
+    alert(activity + name);
   }
 
   return (
@@ -38,7 +38,7 @@ export default function QueryTracks() {
                     color="info"
                     size="large"
                     fullWidth 
-                    primary onClick={() => apiCall(item.activity)}
+                    primary onClick={() => apiCall(item.activity,item.trackName)}
                 >
                     <div>
                     
