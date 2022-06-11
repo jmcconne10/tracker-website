@@ -19,8 +19,15 @@ export default function QueryTracks() {
   },[])
 
   const apiCall = (activity,name) => {
-    alert(activity + name);
+    fetch("https://20gefk5dd7.execute-api.us-east-1.amazonaws.com/dev/post?name=Brendan&activity=exercise", {
+        "method": "GET",
+        })
+        .then(response => response.json())
+        .then(response => { console.log(response);
+        })
+        .catch(err => { console.log(err); });
   }
+  
 
   return (
     <div>
