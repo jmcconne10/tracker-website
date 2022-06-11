@@ -37,9 +37,6 @@ export default function QueryTracks() {
             <MDBox p={2} mt="auto" borderRadius="lg" >
                 
                 <MDButton
-                    /* component="a"
-                    href={"http://" & item.name}
-                    target="_blank"*/
                     rel="noreferrer"
                     variant="gradient"
                     color="info"

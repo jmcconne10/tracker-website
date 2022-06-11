@@ -53,7 +53,7 @@ function Dashboard() {
 
         <MDBox>
           <Grid container spacing={3}>
-            <Grid item xs={1} md={1} lg={12}>
+            <Grid item xs={4} md={1} lg={12}>
               <Projects />
             </Grid>
 
