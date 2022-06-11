@@ -6,10 +6,10 @@ import Grid from "@mui/material/Grid";
 import MDButton from "components/MDButton";
 import MDBox from "components/MDBox";
 
-
-
-function QueryTracks() {
+export default function QueryTracks() {
   const [users , setUsers] = useState([]);
+  const [activityVar, setActivityVar] = useState('');
+  
   useEffect(()=>{
     const fetchData = async() => {
       const response = await axios.get("https://20gefk5dd7.execute-api.us-east-1.amazonaws.com/dev/query");
@@ -18,20 +18,19 @@ function QueryTracks() {
     fetchData();
   },[])
 
-  function sayHello() {
-    alert('Hello!');
+  const apiCall = (incomingVar) => {
+    alert(incomingVar);
   }
-
 
   return (
     <div>
       {users.map(item=>(
 
 
-            <MDBox p={2} mt="auto" borderRadius="lg">
+            <MDBox p={2} mt="auto" borderRadius="lg" >
                 
                 <MDButton
-                   /* component="a"
+                    /* component="a"
                     href={"http://" & item.name}
                     target="_blank"*/
                     rel="noreferrer"
@@ -39,20 +38,18 @@ function QueryTracks() {
                     color="info"
                     size="large"
                     fullWidth 
-                    onClick={sayHello}
+                    primary onClick={() => apiCall(item.activity)}
                 >
                     <div>
-                        {item.name} <p></p>
+                    
                         {item.activity}
                         
                     </div>
                 </MDButton>
+
             </MDBox>
       ))}
 
-      <script></script>
     </div>
   );
 }
-
-export default QueryTracks;
