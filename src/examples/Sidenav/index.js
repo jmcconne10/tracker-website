@@ -167,7 +167,8 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
             sx={(theme) => sidenavLogoLabel(theme, { miniSidenav })}
           >
             <MDTypography component="h6" variant="button" fontWeight="medium" color={textColor}>
-              {brandName}
+              {/*{brandName}*/}
+              Tracker
             </MDTypography>
           </MDBox>
         </MDBox>
@@ -189,7 +190,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           color={sidenavColor}
           fullWidth
         >
-          upgrade to pro
+          My Config3
         </MDButton>
       </MDBox>
     </SidenavRoot>
