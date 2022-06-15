@@ -34,7 +34,7 @@ export default function QueryTracks() {
       {users.map(item=>(
 
 
-            <MDBox p={2} mt="auto" borderRadius="lg" >
+            <MDBox mb={1.5}>
                 
                 <MDButton
                     rel="noreferrer"
