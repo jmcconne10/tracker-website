@@ -12,7 +12,7 @@ export default function QueryTracks() {
   
   useEffect(()=>{
     const fetchData = async() => {
-      const response = await axios.get("https://20gefk5dd7.execute-api.us-east-1.amazonaws.com/dev/query");
+      const response = await axios.get("query.json");
       setUsers(response.data)
     }
     fetchData();
