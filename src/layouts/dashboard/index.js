@@ -43,20 +43,18 @@ function Dashboard() {
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox py={3}>
-        <Grid container spacing={1}>
-
-          <Grid xs={12} md={6} lg={12}>
-            <QueryTracks />
+        <MDBox>
+          <Grid container spacing={1}>
+           <Grid xs={1} md={1} lg={1}> 
+              <QueryTracks />
+            </Grid>
           </Grid>
-
-        </Grid>
-
+        </MDBox>
         <MDBox>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={4} lg={12}>
+            <Grid item xs={12} md={12} lg={12}>
               <Projects />
             </Grid>
-
           </Grid>
         </MDBox>
       </MDBox>
