@@ -10,6 +10,7 @@ export default function QueryTracks() {
   const [users , setUsers] = useState([]);
   const [activityVar, setActivityVar] = useState('');
   
+{/*
   useEffect(()=>{
     const fetchData = async() => {
       const response = await axios.get("https://20gefk5dd7.execute-api.us-east-1.amazonaws.com/dev/query");
@@ -17,6 +18,20 @@ export default function QueryTracks() {
     }
     fetchData();
   },[])
+*/}
+
+  useEffect(()=>{
+    apiGet();
+  },[])
+
+  const apiGet = () => {
+    fetch("https://20gefk5dd7.execute-api.us-east-1.amazonaws.com/dev/query")
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        setUsers(json);
+      });
+  };
 
   const apiCall = (activity,name) => {
     fetch("https://20gefk5dd7.execute-api.us-east-1.amazonaws.com/dev/post?name=" + name + "&activity=" + activity, {
