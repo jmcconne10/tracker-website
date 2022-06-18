@@ -15,7 +15,7 @@ export default function QueryTracks() {
   },[])
 
   const apiGet = () => {
-    fetch("https://20gefk5dd7.execute-api.us-east-1.amazonaws.com/dev/query")
+    fetch("https://20gefk5dd7.execute-api.us-east-1.amazonaws.com/dev/query/")
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
