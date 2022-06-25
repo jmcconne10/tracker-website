@@ -45,7 +45,7 @@ function Dashboard() {
       <MDBox py={3}>
         <MDBox>
           <Grid container spacing={1}>
-           <Grid item xs={1} md={1} lg={1}> 
+           <Grid item xs={12} md={12} lg={12}> 
               <QueryTracks />
             </Grid>
           </Grid>
