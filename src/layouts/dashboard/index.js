@@ -13,6 +13,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+
 // @mui material components
 import Grid from "@mui/material/Grid";
 import MDButton from "components/MDButton";
@@ -32,9 +33,9 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 
-//
+//components I created
 import QueryTracks from "js/QueryTracks";
-//import CompleteTrack from "js/CompleteTrack;"
+import Rows from "js/Rows";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
@@ -50,15 +51,13 @@ function Dashboard() {
             </Grid>
           </Grid>
         </MDBox>
-        <MDBox>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={12} lg={12}>
-              <Projects />
-            </Grid>
-          </Grid>
-        </MDBox>
       </MDBox>
-      <Footer />
+      <Footer />    
+
+     <Rows />
+        
+     
+      
 
     </DashboardLayout>
   );
